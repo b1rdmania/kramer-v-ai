@@ -32,6 +32,7 @@ The **human sign-off is a setting, not a fixed choice.** The same engine can run
 - [`PHILOSOPHY.md`](PHILOSOPHY.md) — why "two realities" is the whole thesis, and the seven rules the build follows.
 - [`MODULES.md`](MODULES.md) — the three parts: Frame Capture, Horizon Fusion, Durable Settlement.
 - [`LEGAL.md`](LEGAL.md) — what makes this lawful and insurable in England & Wales.
+- [`ENGINEERING.md`](ENGINEERING.md) — the build plan: architecture, data/compliance spine, agent pipeline, hosting, and the phased steps.
 - [`docs/questions-for-legal.md`](docs/questions-for-legal.md) — the open questions a family solicitor can help answer.
 
 ## Status
