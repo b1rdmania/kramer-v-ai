@@ -37,3 +37,7 @@ The **human sign-off is a setting, not a fixed choice.** The same engine can run
 ## Status
 
 Exploratory. Built around the [Lawhive](https://lawhive.co.uk) Hackathon (30 May 2026). It's public because I'm looking for people to think and build with — a family-law solicitor especially. If that's you, open an issue or get in touch.
+
+## Licence
+
+Apache 2.0. See [LICENSE](./LICENSE).
