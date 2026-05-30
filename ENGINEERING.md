@@ -141,6 +141,18 @@ All five subclass `BaseAgent` (async Claude call, SHA-256 in/out hashing, audit 
 
 ---
 
+## 7b. Sync points from Legalise master (2026-05-30)
+
+The fork base picks up four helpers + one copy rule that landed during the KISS / elegance pass on Legalise (currently on branch `repo-cleanup-pass`, not yet merged to master — rebase from that ref until merged).
+
+- **`extracted_body_for(session, document_id)`** — `backend/app/models/document_body.py`. The only correct way to load a document body for source-anchored output. Filters on `BODY_KIND_EXTRACTED`; without it, summary/redacted rows can be cited and integrity silently fails. Wire the Horizon-Fusion band and the open-offer drafter through this any time they cite disclosure documents.
+- **`audit_failure` helper** — `backend/app/core/api.py`. Use for any block / denied path whose audit row must survive request rollback (cross-session). Six failure paths in Legalise already route through it; Kramer's safeguarding gate, dial-denied transitions, and disclosure-confirmation blocks should follow the same shape. See [[legalise-audit-failure-pattern]] memory for the rationale (3-round reviewer cycle).
+- **`quote_found_in_source` honesty boundary — LOAD-BEARING demo + UI copy rule.** When an agent returns a quote, the runtime sets `quote_found_in_source: true|false` by literal substring match against the extracted body. **`false` means "not located in the source body we hold" — it does NOT mean the legal claim is false.** Kramer's HITL view, the band card, and the open-offer draft must use this same wording. Never say "verified," "proven," or "certified" about a cited source. The canonical phrasing lives in `legalise/docs/SUPERVISED_AUTONOMY.md`.
+- **Professional Sign-Off primitive shape.** Kramer's gate-card UI should reuse the Legalise shape: `signed` / `signed_with_observations` / `rejected`, append-only history, the exact output payload pinned by hash with the signature attached to the hash. This is the substrate behind the three Kramer gates (safeguarding sign-off → band sign-off → outgoing offer sign-off). Don't build a parallel structure.
+- **`frontend/src/lib/api/_core.ts` + `auth.ts`.** First slice of an api.ts barrel split. Existing `../lib/api` import paths keep resolving via re-export; new domain extractions are mechanical. If Kramer's frontend is rebased post-`57459fa`, the split is already in place — keep adding domain files under `lib/api/` rather than growing the monolith.
+
+---
+
 ## 8. The engineering whitepaper — shape
 
 This document *is* the first draft of it. When it's worth a clean external version (for a technical co-founder or a serious partner), the shape is: **(1)** one-paragraph what-and-why (point to PHILOSOPHY.md), **(2)** architecture + the supervision-dial mechanism, **(3)** the data/compliance spine — segregation, encryption, the Art 22 audit chain (this is the defensible asset, lead with it), **(4)** the agent pipeline + eval/safeguarding-recall discipline, **(5)** hosting + security posture + the model-data (ZDR) stance, **(6)** the phased roadmap. Keep §3 and §4 the centre of gravity — they're what a serious technical reader will judge.
