@@ -33,12 +33,31 @@ The **human sign-off is a setting, not a fixed choice.** The same engine can run
 
 The pattern generalises. Divorce settlement is the demonstration because it is the most emotionally compressed legal moment most people will face. The same shape — emotional capture, safeguarding-first, supervised autonomy, audit trail — applies anywhere the law needs to hear someone before it can help them.
 
+## Brand & soul
+
+**Solemn Warmth.** The calm of a serious, kind room — somewhere grief can be set down and held with dignity, not hurried along or cheered up. Unhurried. Restrained, because restraint reads as care here. The opposite of a bright launch and the opposite of a cold dashboard. If a choice draws attention to itself, it's wrong; the work is to help two people put something heavy down, not to impress them.
+
+The metaphor everything is designed against is **the overlap — the seam**: two fields meeting into a single patch of shared ground. Convergence, not opposition. The name reads as *versus*; everything the brand does says *together*.
+
+A few language anchors that hold across the build:
+
+> *"We don't find the truth — we build the smallest reality both people can live in."*
+>
+> *"We are not trying to win the divorce. We are trying to end the war."*
+>
+> *"Plain over clever. Clarity is a form of respect."*
+
+For the full brand spine — emotional north star, voice, principles, on-brand vs off-brand examples, language do's and don'ts, visual territory — see the brand docs below. Visual mechanics (type, colour, layout, motion) are deliberately left to designers, decided by eye against the feeling and metaphor.
+
 ## Read next
 
 - [`PHILOSOPHY.md`](PHILOSOPHY.md) — why "two realities" is the whole thesis, and the seven rules the build follows.
 - [`MODULES.md`](MODULES.md) — the three parts: Frame Capture (live), Horizon Fusion, Durable Settlement.
 - [`LEGAL.md`](LEGAL.md) — what makes this lawful and insurable in England & Wales.
 - [`ENGINEERING.md`](ENGINEERING.md) — the build plan: architecture, data/compliance spine, agent pipeline, hosting, and the phased steps.
+- [`docs/brand/emotive-narrative.md`](docs/brand/emotive-narrative.md) — the soul. Plutchik / Sage + Caregiver archetype, Human Moment → Deeper Truth → Transformation → Ethos → Personality → North Star.
+- [`docs/brand/philosophy.md`](docs/brand/philosophy.md) — strategic essence and voice. Principles, on-brand vs off-brand examples, language to use and avoid.
+- [`docs/brand/visual-philosophy.md`](docs/brand/visual-philosophy.md) — the feeling and the metaphor to design against. Visual mechanics deliberately left to designers, by eye.
 - [`docs/questions-for-legal.md`](docs/questions-for-legal.md) — the open questions a family solicitor can help answer.
 
 ## Status
