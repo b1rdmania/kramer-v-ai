@@ -12,7 +12,7 @@ Kramer v AI is an experiment in doing the opposite. It captures each person's ac
 
 The name is deliberately wrong. *Kramer v Kramer* is the bitter custody battle; this is its cooperative opposite. It's a working title; the real product would be renamed.
 
-## The base concept
+## The architecture
 
 ```mermaid
 flowchart TD
@@ -27,17 +27,23 @@ flowchart TD
 
 The **human sign-off is a setting, not a fixed choice.** The same engine can run with a solicitor on each side, one solicitor, a neutral mediator, no lawyer at all, or as pure advice. Three things stay constant whichever way the dial is turned: safeguarding runs first, the audit trail always exists, and the emotional read is only ever seen by the human in the loop, never the client.
 
+## What's live (hackathon build)
+
+**One party. Frame Capture, end-to-end.** Empathetic intake, safeguarding gate, audit trail. The emotional read — what the client will not say out loud — is the hero, because it is the hardest engineering problem here and the part nobody else is building. Horizon Fusion and Durable Settlement stay in the architecture as the next horizons, not this weekend's deliverable.
+
+The pattern generalises. Divorce settlement is the demonstration because it is the most emotionally compressed legal moment most people will face. The same shape — emotional capture, safeguarding-first, supervised autonomy, audit trail — applies anywhere the law needs to hear someone before it can help them.
+
 ## Read next
 
 - [`PHILOSOPHY.md`](PHILOSOPHY.md) — why "two realities" is the whole thesis, and the seven rules the build follows.
-- [`MODULES.md`](MODULES.md) — the three parts: Frame Capture, Horizon Fusion, Durable Settlement.
+- [`MODULES.md`](MODULES.md) — the three parts: Frame Capture (live), Horizon Fusion, Durable Settlement.
 - [`LEGAL.md`](LEGAL.md) — what makes this lawful and insurable in England & Wales.
 - [`ENGINEERING.md`](ENGINEERING.md) — the build plan: architecture, data/compliance spine, agent pipeline, hosting, and the phased steps.
 - [`docs/questions-for-legal.md`](docs/questions-for-legal.md) — the open questions a family solicitor can help answer.
 
 ## Status
 
-Exploratory. Built around the [Lawhive](https://lawhive.co.uk) Hackathon (30 May 2026). It's public because I'm looking for people to think and build with — a family-law solicitor especially. If that's you, open an issue or get in touch.
+Exploratory. Built for the [Lawhive](https://lawhive.co.uk) Hackathon (30 May 2026), under the broad access-to-justice brief; divorce is the showcase, not the scope. It's public because I'm looking for people to think and build with — a family-law solicitor especially. If that's you, open an issue or get in touch.
 
 ## Licence
 

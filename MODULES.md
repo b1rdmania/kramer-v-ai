@@ -8,23 +8,25 @@ These fall directly out of [`PHILOSOPHY.md`](PHILOSOPHY.md). Each module exists 
    intact)             not the winner)        real, and make it hold)
 ```
 
+Module 1 is the headline capability of the live build, run unilaterally for the demo. Modules 2 and 3 are the architecture — where the same supervised-autonomy spine extends to once two accounts are in the system.
+
 ---
 
-## Module 1 — Frame Capture
+## Module 1 — Frame Capture *(live)*
 
 *Serves guidelines 1 (two frames), 7 (show two realities), and the safeguarding gate.*
 
-Capture each party's reality, emotional and financial, as a first-class, valid, **segregated** account. Never merged, never fact-checked into a single "truth."
+Capture each party's reality, emotional and financial, as a first-class, valid, **segregated** account. Never merged, never fact-checked into a single "truth." For this build, the module runs unilaterally — one person, heard in full — to demonstrate the emotional-read primitive that the rest of the architecture rests on.
 
-- **Emotional discovery.** Empathetic intake (Gottman / EFT frameworks). Surfaces the need under the stated position. Listens; does not advise or correct.
+- **Emotional discovery.** Empathetic intake (Gottman / EFT frameworks). Surfaces the need under the stated position. Listens; does not advise or correct. **This is the hero of the build** — the hardest engineering problem here, and the part of the legal stack nobody else is building.
 - **Financial disclosure.** Form E-style intake, simplified for negotiation.
 - **Safeguarding is the first gate.** Before anything proceeds: domestic-abuse / coercion screening (FPR PD3A / MIAM norms). On a signal → escalate, do not negotiate. Quick-exit UX. See [`LEGAL.md`](LEGAL.md).
 
-The AI's job here is **to listen and to validate a frame**, not to evaluate it.
+The AI's job here is **to listen and to validate a frame**, not to evaluate it. The emotional read is only ever surfaced to the human in the loop, never to the client.
 
 ---
 
-## Module 2 — Horizon Fusion
+## Module 2 — Horizon Fusion *(architecture)*
 
 *Serves guidelines 2 (translator), 3 (refuse "who's right"), 4 (durability).*
 
@@ -38,7 +40,7 @@ The AI's job here is **translation and overlap-finding**, not judgment.
 
 ---
 
-## Module 3 — Durable Settlement
+## Module 3 — Durable Settlement *(architecture)*
 
 *Serves guidelines 4 (durability), 5 (preserve the Thou), 6 (speed/no decoherence).*
 
