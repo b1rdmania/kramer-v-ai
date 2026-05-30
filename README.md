@@ -4,6 +4,8 @@
 
 > There's no view from nowhere in a divorce. We don't find the truth — we build the smallest reality both people can live in.
 
+**▶ [Watch the demo (YouTube)](https://www.youtube.com/watch?v=DcBNocXnQO0)** · [Live demo](https://kramer-v-ai-build.vercel.app)
+
 ## About
 
 Divorce settlement gets treated as a maths problem: split the assets, divide the pot. It isn't. The numbers are the easy part. The hard part is that two people, depleted and resentful, are looking at the same marriage from two incompatible realities — and the adversarial legal process drives them further apart while billing by the hour. The settlement reached after eighteen months of disclosure warfare is worse, not just dearer, than the one that was reachable in week two.
