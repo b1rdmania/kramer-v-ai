@@ -1,18 +1,36 @@
-# Kramer v AI
+# Kramer vs Kramer vs AI
 
-*A supervised-autonomy workbench for amicable UK divorce settlement.*
+*A settlement-intelligence workbench for separating couples. Built in a rush. Now in public beta.*
 
-> There is no view from nowhere in a divorce. We do not find the truth. We build the smallest reality both people can live in, and we make it hold.
+🌐 [**divorce.broker**](https://divorce.broker) — the live demo
 
-**▶ [Watch the demo (YouTube)](https://www.youtube.com/watch?v=DcBNocXnQO0)** · [Live demo](https://kramer-v-ai-build.vercel.app)
+> A divorce is not a problem with one truth. It is two realities, each true to the person holding it. The job is not to pick a winner. The job is to find the smallest reality both people can live with.
 
-## About
+## What this is
 
-Divorce settlement gets treated as a maths problem: split the assets, divide the pot. It is not. The numbers are the easy part. The hard part is that two people, depleted and resentful, are looking at the same marriage from two incompatible realities. The adversarial legal process drives them further apart while billing by the hour. The settlement reached after eighteen months of disclosure warfare is worse, not just dearer, than the one that was reachable in week two.
+Divorce settlement should not take 18 months, ruin two lives, and cost £150k.
 
-Kramer v AI is an experiment in doing the opposite. It captures each person's account on its own terms, surfaces what neither side will say out loud, finds the zone where both realities overlap, and drafts a settlement built to last. A qualified human signs off at each consequential step. Every step leaves a hash-chained audit row.
+Kramer vs Kramer vs AI is a six-stage workbench that takes two people, two intakes, three settlement options, and a solicitor at the gates, and produces a court-ready pack a solicitor can actually sign.
 
-The name is deliberately wrong. *Kramer v Kramer* is the bitter custody battle. This is its cooperative opposite. It is a working title; the real product would be renamed.
+The interesting part is not the maths. It is the emotional input. Structured prompts inspired by relationship-pattern work from couples therapy. *Money explains what can be divided. The human part explains what a person can actually live with.*
+
+It is not therapy. It is not diagnosis. It is structured input for settlement design.
+
+## The demo
+
+The live demo runs a synthetic parody pack. **Nicole Kidman v Keith Urban.** Notting Hill family home, two children mid-secondary, five active pet custody disputes, a 1959 Les Paul ("the divorce Telecaster" lives elsewhere), and a red carpet jewellery loan register that is not exhibited. **Johnny Cochran signs off.**
+
+Walk it:
+
+1. **Splash** — Nicole on the wall, the song drops in at 25 seconds.
+2. **Money Picture** — Form E-style disclosure. Click "View demo pack" to inspect the marriage certificate, the awards display schedule, the guitar collection, and the disclosure gaps.
+3. **The Human Part** — ten prompts seeded with Nicole's voice. Tone chips. Editable.
+4. **Settlement Options** — three shapes, durability-scored. The reviewer picks. The system does not recommend.
+5. **Talk It Through** — ask anything in plain English. *"No, he can't have visitation rights for my Oscar. Does that change things?"* Watch what the model refuses to say.
+6. **Agreement** — Johnny Cochran records the agreement-in-principle.
+7. **Export Pack** — a solicitor-review bundle. No court submission from here.
+
+Five seconds from picker to a working Money Picture. No live LLM waits inside the demo — everything is pre-seeded server-side.
 
 ## The architecture
 
@@ -27,55 +45,51 @@ flowchart TD
     DS --> CO["Court-approved consent order"]
 ```
 
-The **human sign-off is a setting, not a fixed choice.** The same engine can run with a solicitor on each side, one solicitor, a neutral mediator, no lawyer at all, or as pure advice. Three things stay constant whichever way the dial is turned: safeguarding runs first, the audit trail always exists, and the emotional read is only ever seen by the human in the loop, never the client.
+The human sign-off is a setting, not a fixed choice. The same engine can run with a solicitor on each side, one solicitor, a neutral mediator, no lawyer at all, or as pure advice. Three things stay constant whichever way the dial is turned: safeguarding runs first, the audit trail always exists, and the emotional read is only ever seen by the human in the loop, never the client.
 
-## What is live
+## Stack
 
-A six-step workbench, end-to-end, against a synthetic matter (Khan v Acme):
+- **Frontend.** React 19 + Vite + Tailwind v4. Paper Ink design language. One typeface (Hanken Grotesk). Zero radius. Zero shadow. Borders carry all depth. A sealing-wax red for refused / blocked / parody. A small accent palette pulled from the splash (pink, garden green, warm gold) used sparingly on chips and selected states.
+- **Backend.** FastAPI + the Anthropic SDK (Sonnet 4.6) + SQLite. App-level WORM. Hash-chained audit per matter.
+- **Hosting.** Vercel for the frontend at [divorce.broker](https://divorce.broker). Render Frankfurt for the backend.
+- **One streaming endpoint.** Talk It Through opens an SSE stream from the model with the option, case pack, frame capture, and reviewer-only emotional read as context. The rest of the demo is server-seeded canned data so the journey never waits.
 
-1. **Disclosure.** A Form E-style case pack: property, pensions, savings, vehicles, liabilities, income, children, housing needs.
-2. **Emotional Read.** Reviewer-only. The watchable LLM beat. Drivers, blindspots, reviewer notes, every quote checked against the transcript.
-3. **Frame Capture.** Structured synthesis of what each person actually said. Stated positions, underlying needs, fears, non-negotiables, settlement weights.
-4. **Settlement.** Three defensible option shapes, each scored 1 to 10 for durability. The reviewer picks. The system does not recommend.
-5. **Agreement.** Sign-off plus an agreement record. Both sides confirm.
-6. **Export pack.** A solicitor-reviewable bundle: D81-style preparation summary, agreement record, audit chain, verification. The emotional read and the synthetic Party B raw frame are deliberately omitted.
+## What is built into the demo on purpose
 
-Stack: React 19 + Vite + Tailwind v4 on the front. FastAPI + Anthropic SDK (Sonnet 4.6) + SQLite on the back. Cloudflare Vercel + Render Frankfurt for hosting.
+- **The Human Part is the conceptual heart.** Ten prompts inspired by relationship-pattern work, not therapy. Each prompt has an editable answer and a tone chip. The synthesised Frame Capture and the reviewer-only Emotional Read sit collapsed below.
+- **The Settlement Room refuses to call a settlement fair.** It explains what each option is trying to balance. It names the tradeoff. It always mentions solicitor review for legal mechanics. It never recommends.
+- **The audit chain is visible behind a "View proof" drawer.** Verified, hash-linked, with the technical chain available but collapsed by default. The main flow is about the settlement; the machinery is supporting evidence.
+- **Safeguarding is the first gate.** A coercion signal stops everything. No optimisation overrides it.
 
-The pattern generalises. Divorce settlement is the demonstration because it is the most emotionally compressed legal moment most people will face. The same shape (emotional capture, safeguarding-first, supervised autonomy, hash-chained audit) applies anywhere the law needs to hear someone before it can help them.
+## What is not in the demo on purpose
 
-## Brand and soul
-
-The live build uses a **Paper Ink** design language: white paper, ink type, a single sealing-wax red used only on destructive or refused surfaces. One typeface. Zero radius, zero shadow, zero gradient. Borders carry all depth. It reads as a serious workspace, not a launch.
-
-The metaphor the build is designed against is **the overlap**, the seam: two fields meeting into a single patch of shared ground. Convergence, not opposition. The name reads as *versus*; everything the product does says *together*.
-
-A few language anchors that hold across the build:
-
-> *"We do not find the truth. We build the smallest reality both people can live in."*
->
-> *"We are not trying to win the divorce. We are trying to end the war."*
->
-> *"Plain over clever. Clarity is a form of respect."*
-
-For the brand spine (emotional north star, voice, principles, on-brand vs off-brand examples, language do's and don'ts), see the brand docs below.
+- No login, no upload, no role switching.
+- No live LLM calls during bootstrap. The Settlement Room is the only live model call on the main path.
+- No direct submission to MyHMCTS or anywhere else. The export is for solicitor review before any filing.
+- No claim of court approval. No claim of clinical assessment. No claim of legal advice.
 
 ## Read next
 
-- [`PHILOSOPHY.md`](PHILOSOPHY.md). Why "two realities" is the whole thesis, and the seven rules the build follows.
-- [`MODULES.md`](MODULES.md). The three parts: Frame Capture, Horizon Fusion, Durable Settlement.
-- [`LEGAL.md`](LEGAL.md). What makes this lawful and insurable in England and Wales.
-- [`ENGINEERING.md`](ENGINEERING.md). The build plan: architecture, data and compliance spine, agent pipeline, hosting, phased steps.
-- [`docs/brand/emotive-narrative.md`](docs/brand/emotive-narrative.md). The soul. Plutchik plus Sage + Caregiver archetype, Human Moment to Deeper Truth to Transformation to Ethos to Personality to North Star.
-- [`docs/brand/philosophy.md`](docs/brand/philosophy.md). Strategic essence and voice.
-- [`docs/brand/visual-philosophy.md`](docs/brand/visual-philosophy.md). The feeling and the metaphor to design against.
-- [`docs/questions-for-legal.md`](docs/questions-for-legal.md). The open questions a family solicitor can help answer.
+- [`PHILOSOPHY.md`](PHILOSOPHY.md) — why "two realities" is the whole thesis.
+- [`MODULES.md`](MODULES.md) — the three parts: Frame Capture, Horizon Fusion, Durable Settlement.
+- [`LEGAL.md`](LEGAL.md) — what makes this lawful and insurable in England and Wales.
+- [`ENGINEERING.md`](ENGINEERING.md) — architecture, data and compliance spine, agent pipeline, hosting.
+- [`docs/brand/emotive-narrative.md`](docs/brand/emotive-narrative.md) — the soul.
+- [`docs/brand/philosophy.md`](docs/brand/philosophy.md) — voice and principles.
+- [`docs/questions-for-legal.md`](docs/questions-for-legal.md) — the open questions for a family solicitor.
+
+## Built by
+
+- **Andy Bird.** [GitHub](https://github.com/b1rdmania) · [LinkedIn](https://www.linkedin.com/in/andrew-bird-nomos) · [X](https://x.com/b1rdmania)
+- **Christine Ng.** [LinkedIn](https://www.linkedin.com/in/christinengproductmanager/)
+
+Music made in [wario.style](https://wario.style).
 
 ## Status
 
-Built for the [Lawhive](https://lawhive.co.uk) Hackathon (30 May 2026) under the broad access-to-justice brief. Divorce is the showcase, not the scope. Did not place at the pitch on 31 May. The build is live, the smoke is green end-to-end, and iteration is continuing in public.
+**v0.1 · public beta.** Built in a rush for the [Lawhive](https://lawhive.co.uk) hackathon (30 May 2026). Did not place. Kept building. The live demo is the working surface; this repo is the public-facing thinking behind it.
 
-It is public because I am looking for people to think and build with. A family-law solicitor especially. If that is you, open an issue or get in touch.
+It is public because I am looking for people to think and build with. A family-law solicitor especially. Open an issue or get in touch.
 
 ## Licence
 
