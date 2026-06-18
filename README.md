@@ -1,8 +1,10 @@
-# Kramer vs Kramer vs AI
+# divorce.broker
 
-*A settlement-intelligence workbench for separating couples. Built in a rush. Now in public beta.*
+*Settlement intelligence for separating couples. End the war, not your savings.*
 
-🌐 [**divorce.broker**](https://divorce.broker) — the live demo
+🌐 **Live:** [**divorce.broker**](https://divorce.broker)
+
+*Originally built as "Kramer vs Kramer vs AI" — hence the repo name.*
 
 > A divorce is not a problem with one truth. It is two realities, each true to the person holding it. The job is not to pick a winner. The job is to find the smallest reality both people can live with.
 
@@ -10,7 +12,7 @@
 
 Divorce settlement should not take 18 months, ruin two lives, and cost £150k.
 
-Kramer vs Kramer vs AI is a six-stage workbench that takes two people, two intakes, three settlement options, and a solicitor at the gates, and produces a court-ready pack a solicitor can actually sign.
+divorce.broker is a six-stage workbench that takes two people, two intakes, three settlement options, and a solicitor at the gates, and produces a court-ready pack a solicitor can actually sign.
 
 The interesting part is not the maths. It is the emotional input. Structured prompts inspired by relationship-pattern work from couples therapy. *Money explains what can be divided. The human part explains what a person can actually live with.*
 
@@ -87,7 +89,7 @@ Music made in [wario.style](https://wario.style).
 
 ## Status
 
-**v0.1 · public beta.** Built in a rush for the [Lawhive](https://lawhive.co.uk) hackathon (30 May 2026). Did not place. Kept building. The live demo is the working surface; this repo is the public-facing thinking behind it.
+**v0.2 · public beta.** Built in a rush for the [Lawhive](https://lawhive.co.uk) hackathon (30 May 2026). Did not place. Kept building, renamed to divorce.broker, polished the guided demo. The live demo is the working surface; this repo is the public-facing thinking behind it.
 
 It is public because I am looking for people to think and build with. A family-law solicitor especially. Open an issue or get in touch.
 
